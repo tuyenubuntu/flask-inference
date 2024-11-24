@@ -1,0 +1,55 @@
+# Byte-compiled / optimized / compiled Python files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+
+# Flask cache
+instance/
+*.log
+*.pid
+
+# Temporary files and folders
+*.bak
+*.swp
+*.tmp
+*.~lock.*
+*.orig
+
+# IDE specific files
+.vscode/
+.idea/
+*.iml
+
+# MacOS files
+.DS_Store
+Thumbs.db
+
+# Pytest / Testing
+.cache/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Database
+*.sqlite3
+*.db
+
+# Static and media uploads (optional)
+app/static/uploads/
+app/static/tmp/
+
+# Deployment specific
+*.pem
+*.crt
+*.key
+
+# Docker
+# *.container
+# *.log
+*.tar
+docker-compose.override.yml
