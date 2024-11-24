@@ -8,18 +8,13 @@ class Stream(threading.Thread):
         self.camera = None  # Camera will be initialized when the stream starts
         self.is_streaming = False  # Stream is initially stopped
         self.lock = threading.Lock()  # Thread-safe operations for starting/stopping
-        self.input_source = args.input_usb
-        if args.stream_usb:
-            pass
-        elif args.stream_webcam:
-            self.input_source = args.input_webcam
+        #self.input_source = 0
 
     def run_stream(self):
         """Start the stream."""
         with self.lock:
             if not self.is_streaming:
-                #self.camera = cv2.VideoCapture(self.args.input_webcam)  # Adjust input source if necessary
-                self.camera = cv2.VideoCapture(self.input_source)  # Adjust input source if necessary
+                self.camera = cv2.VideoCapture(self.args.input_usb)  # Adjust input source if necessary
                 self.camera.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)  # Set width
                 self.camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)  # Set height
                 self.camera.set(cv2.CAP_PROP_FPS, 60)  # Set FPS
