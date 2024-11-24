@@ -9,7 +9,7 @@ parser.add_argument("--host", default='0.0.0.0', type=str, help="interface for t
 parser.add_argument("--port", default=5000, type=int, help="port used for webserver (default is 8050)")
 parser.add_argument("--input", default='webrtc://@:8554/input', type=str, help="input camera stream or video file")
 parser.add_argument("--input-webcam", type=int, default=0 , help="Input video source (default is webcam).")
-parser.add_argument("--input-usb", type=int, default=0 , help="Input video source (default is webcam).")
+parser.add_argument("--input-usb", type=str, default='/dev/video0' , help="Input video source (default is webcam).")
 parser.add_argument("--debug", action='store_true')
 parser.add_argument("--detection", default='', type=str, help="load object detection model (see detectNet arguments)")
 parser.add_argument("--labels", default='', type=str, help="path to labels.txt for loading a custom model")
@@ -19,6 +19,7 @@ parser.add_argument("--output-layer", default='', type=str, help="name of output
 #boolean
 parser.add_argument("--stream-webcam", action='store_true')
 parser.add_argument("--stream", action='store_true')
+parser.add_argument("--stream-usb", action='store_true')
 parser.add_argument("--jetson", action='store_true')
 parser.add_argument("--opencv", action='store_true')
 
@@ -86,4 +87,4 @@ def handle_navigation(data):
 
 
 if __name__ == '__main__':
-    socketio.run(app, host=args.host, port=args.port, debug=True)
+    socketio.run(app, host=args.host, port=args.port, debug=args.debug)
