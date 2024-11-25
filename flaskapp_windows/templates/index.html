@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Stream</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Camera Stream App</h1>
+    <!-- <img src="{{ url_for('video') }}" alt="Camera Stream" id="video-stream"> -->
+    <a href="{{ url_for('stream_video') }}">
+        <button>Go to Stream</button>
+    </a>
+</body>
+</html>

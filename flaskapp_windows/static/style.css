@@ -1,0 +1,92 @@
+/* Định dạng chung */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+/*format video */
+
+#video-stream {
+    width: 1280px;  /* Set the desired width */
+    height: 720px;  /* Set the desired height */
+    object-fit: cover; /* Ensure the video fills the space appropriately */
+    /*border: 1px solid #ccc; /* Optional: Add a border for styling */
+    display: block;
+    /*margin: 0 auto; /* Center the video */
+    max-width: 100%;
+    border: 3px solid #007BFF;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+/* Đầu trang */
+h1 {
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+/* Các nút */
+
+.button-row {
+    display: flex;           /* Use Flexbox for horizontal alignment */
+    justify-content: center; /* Center the buttons */
+    gap: 15px;               /* Add spacing between buttons */
+    margin-top: 20px;        /* Add some space above the buttons */
+}
+
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Liên kết */
+a {
+    text-decoration: none;
+}
+
+/* Hình ảnh video */
+#video-stream {
+    max-width: 100%;
+    border: 3px solid #007BFF;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+/* Khung nội dung */
+.container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Văn bản thông báo từ server */
+#serverResponse {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #28a745;
+}

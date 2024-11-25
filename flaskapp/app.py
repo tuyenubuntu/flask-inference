@@ -53,7 +53,7 @@ def video():
         return Response(streams.generate(),
                         mimetype='multipart/x-mixed-replace; boundary=frame')
     # Return a placeholder image if the stream is not running
-    return send_file('static/nocap.png', mimetype='image/png')  # Update with your placeholder path
+    return send_file('static/images/nocap.png', mimetype='image/png')  # Update with your placeholder path
 
     
     

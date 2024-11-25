@@ -357,7 +357,7 @@ CMD ["python", "app.py"]
 
 #structor
 
-stream/
+flask-inference/
 ├── flaskapp/                      # Thư mục chứa mã nguồn chính của ứng dụng
 │   ├── app.py           # Khởi tạo ứng dụng Flask, đăng ký các module/extension
 │   ├── stream.py             # Định nghĩa các route (URL endpoint)
@@ -377,7 +377,7 @@ stream/
 │   └── utils.py              # Các hàm tiện ích hoặc logic tái sử dụng
 ├── docker/                      # Thư mục chứa mã nguồn chính của ứng dụng
 │   ├── Dockerfile           # Khởi tạo docker
-│   ├── requirement.txt            # requirement
+│   ├── requirements.txt            # requirements
 │   ├── 
 
 
